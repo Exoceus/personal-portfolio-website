@@ -1,0 +1,146 @@
+footer {
+    background-color: $secondary_color;
+    .footer_social {
+        height: auto;
+        width: 100%;
+        margin: 2rem 0 0 0;
+        padding: 1rem 0 0 0;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0.5rem 0;
+        display: grid;
+        grid-template-columns: 5% 5% 5% 5% 5%;
+        justify-content: center;
+        li {
+            margin: 0;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            a {
+                text-decoration: none;
+                text-decoration-color: none;
+            }
+        }
+    }
+    .copyright {
+        padding: 0.5rem 0;
+        color: $teritary_color;
+        font-size: 1.15rem;
+    }
+}
+
+.footer_icon_wrapper {
+    justify-content: center;
+    border: 2px solid $teritary_color;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    margin-right: 0;
+    i {
+        color: $teritary_color;
+        font-size: 1.5rem;
+        align-self: center;
+    }
+    i::before {
+        margin: 0;
+        padding: 0;
+        height: auto;
+    }
+}
+
+.footer_icon_wrapper:hover {
+    background: $teritary_color;
+    i {
+        color: $secondary_color;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width:1200px) {
+    footer {
+        ul {
+            grid-template-columns: 8% 8% 8% 8% 8%;
+        }
+    }
+}
+
+/*
+---------------------Resume section begins-----------------------------
+*/
+
+.footer_resume_wrapper {
+    width: 100%;
+    padding-top: 1rem;
+    display: grid;
+    justify-content: center;
+}
+
+.footer_resume {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    margin: 1rem 0 3rem 0;
+    padding: 3rem 2rem;
+    background-color: $primary_color;
+    margin: 0 1rem;
+    border-radius: 10px;
+    margin-top: -5rem;
+    max-width: 1200px;
+    color: #fff;
+}
+
+.footer_resume_column {
+    margin: 0;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    h2 {
+        margin: 0 auto;
+    }
+    p {
+        margin: 0 auto;
+    }
+    input {
+        margin: 0 auto;
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid white;
+        outline: transparent;
+        width: 85%;
+        color: #fff;
+        :hover {
+            border: none;
+            border-bottom: 2px solid white;
+        }
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width:1200px) {
+    footer {
+        ul {
+            grid-template-columns: 8% 8% 8% 8% 8%;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    footer {
+        ul {
+            grid-template-columns: 15% 15% 15% 15% 15%;
+        }
+    }
+    .footer_icon_wrapper {
+        height: 2.5rem;
+        width: 2.5rem;
+        i {
+            font-size: 1.25rem;
+        }
+    }
+    .footer_resume {
+        grid-template-rows: 33.3% 33.3% 33.3%;
+        grid-template-columns: 100%;
+    }
+}

@@ -1,0 +1,38 @@
+.intro {
+    background-color: $primary_color;
+    padding: 3rem 0 0 0;
+}
+
+.intro_title {
+    margin: 0;
+    padding: 1rem 0;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 2.25rem;
+}
+
+.intro_title span {
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.intro_title::after {
+    content: "";
+    display: block;
+    background: #fff;
+    width: 7.5rem;
+    height: 4px;
+    margin: 1rem auto 0 auto;
+    box-shadow: 2px 3px 3px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+p.intro {
+    padding: 0 0 10rem 0;
+    margin: 0rem 10%;
+    color: $teritary_color;
+    line-height: 1.65rem;
+    font-size: 1.25rem;
+}
