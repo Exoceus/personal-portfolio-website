@@ -61,7 +61,18 @@ section.welcome-page {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-position: center; }
+  background-position: center;
+  display: flex;
+  align-items: center;
+  text-align: center; }
+
+.landing_page_hero_heading {
+  width: 100vw;
+  position: absolute;
+  color: #293347;
+  font-family: 'Roboto', sans-serif;
+  font-size: 4rem;
+  height: auto; }
 
 /*
 background-color: #0068ad;
@@ -83,7 +94,7 @@ background-size: cover;
   /*   background-size: contain; */ }
 
 i.fa-angle-down {
-  background: linear-gradient(to bottom, #0068ad, #24dbd2);
+  background: linear-gradient(to bottom, #ff8900, #cc8417);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent; }
@@ -97,7 +108,7 @@ i.fa-angle-down {
   color: black; }
 
 header {
-  background: #0068ad;
+  background: transparent;
   text-align: center;
   position: fixed;
   z-index: 999;
@@ -136,7 +147,7 @@ header {
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
   display: block;
-  background: #fff;
+  background: #ff8900;
   position: relative;
   box-shadow: 2px 3px 3px 2px rgba(0, 0, 0, 0.1); }
 
@@ -159,7 +170,7 @@ nav {
   text-align: left;
   top: 100%;
   left: 0;
-  background: #f85a3e;
+  background: #ff8900;
   width: 100%;
   transform: scale(1, 0);
   transform-origin: top;
@@ -196,7 +207,7 @@ nav button:hover {
   transition: opacity 250ms ease-in-out 250ms; }
 
 nav a {
-  color: white;
+  color: #ff8900;
   text-decoration: none;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -245,10 +256,10 @@ nav a:hover {
 
   nav button {
     background: transparent;
-    border: 2px solid #f85a3e;
+    border: 2px solid #ff8900;
     outline: none;
     border-radius: 1rem;
-    color: #fff;
+    color: #ff8900;
     opacity: 1;
     font-size: 1.25rem;
     text-transform: none;
@@ -256,7 +267,7 @@ nav a:hover {
     padding: 0.2rem 0.25rem; }
 
   nav button:hover {
-    background: #f85a3e;
+    background: #ff8900;
     color: #fff; }
 
   nav a {
