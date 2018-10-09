@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito|Open+Sans|Quicksand|Roboto");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
 h2 {
   font-family: 'Roboto', sans-serif; }
 
@@ -52,6 +53,10 @@ body {
 .landing_page_hero_subheading {
   font-weight: 200; }
 
+.avatar_icon {
+  width: 75%;
+  margin: 0 0 0 23%; }
+
 /*
 background-color: #0068ad;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='194' height='194' viewBox='0 0 200 200'%3E%3Cg %3E%3Cpolygon fill='%23b36d23' points='100 57.1 64 93.1 71.5 100.6 100 72.1'/%3E%3Cpolygon fill='%23d9852b' points='100 57.1 100 72.1 128.6 100.6 136.1 93.1'/%3E%3Cpolygon fill='%23b36d23' points='100 163.2 100 178.2 170.7 107.5 170.8 92.4'/%3E%3Cpolygon fill='%23d9852b' points='100 163.2 29.2 92.5 29.2 107.5 100 178.2'/%3E%3Cpath fill='%23ff9c32' d='M100 21.8L29.2 92.5l70.7 70.7l70.7-70.7L100 21.8z M100 127.9L64.6 92.5L100 57.1l35.4 35.4L100 127.9z'/%3E%3Cpolygon fill='%23ae3f2b' points='0 157.1 0 172.1 28.6 200.6 36.1 193.1'/%3E%3Cpolygon fill='%23d34d35' points='70.7 200 70.8 192.4 63.2 200'/%3E%3Cpolygon fill='%23f85a3e' points='27.8 200 63.2 200 70.7 192.5 0 121.8 0 157.2 35.3 192.5'/%3E%3Cpolygon fill='%23d34d35' points='200 157.1 164 193.1 171.5 200.6 200 172.1'/%3E%3Cpolygon fill='%23ae3f2b' points='136.7 200 129.2 192.5 129.2 200'/%3E%3Cpolygon fill='%23f85a3e' points='172.1 200 164.6 192.5 200 157.1 200 157.2 200 121.8 200 121.8 129.2 192.5 136.7 200'/%3E%3Cpolygon fill='%23ae3f2b' points='129.2 0 129.2 7.5 200 78.2 200 63.2 136.7 0'/%3E%3Cpolygon fill='%23f85a3e' points='200 27.8 200 27.9 172.1 0 136.7 0 200 63.2 200 63.2'/%3E%3Cpolygon fill='%23d34d35' points='63.2 0 0 63.2 0 78.2 70.7 7.5 70.7 0'/%3E%3Cpolygon fill='%23f85a3e' points='0 63.2 63.2 0 27.8 0 0 27.8'/%3E%3C/g%3E%3C/svg%3E");
@@ -99,8 +104,9 @@ header {
   font-weight: 600;
   font-family: 'Open Sans', sans-serif;
   font-size: 1.75rem;
-  margin: 0;
-  align-self: center; }
+  margin: 0 auto;
+  align-self: center;
+  width: 12.5%; }
 
 /* changed this from the tutorial video to
    allow it to gain focus, making it tabbable */
@@ -127,7 +133,7 @@ header {
   display: block;
   background: #ff8900;
   position: relative;
-  box-shadow: 2px 3px 3px 2px rgba(0, 0, 0, 0.1); }
+  box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.05); }
 
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
@@ -193,7 +199,7 @@ nav a {
   transition: opacity 150ms ease-in-out; }
 
 nav a:hover {
-  color: #e7c91a; }
+  color: #ff7c02; }
 
 .nav-toggle:checked ~ nav {
   transform: scale(1, 1); }
@@ -213,6 +219,9 @@ nav a:hover {
 
   .logo {
     grid-column: 2 / 3; }
+
+  .logo img {
+    width: 300%; }
 
   nav {
     all: unset;
@@ -256,7 +265,7 @@ nav a:hover {
     content: '';
     display: block;
     height: 3px;
-    background: #e7c91a;
+    background: #293347;
     border-radius: 3px;
     position: absolute;
     top: 1.4rem;
@@ -268,7 +277,7 @@ nav a:hover {
   nav a:hover::before {
     transform: scale(1, 1); } }
 .intro {
-  background-color: #0068ad;
+  background-color: #ff8900;
   padding: 3rem 0 0 0; }
 
 .intro_title {
@@ -297,9 +306,11 @@ nav a:hover {
 p.intro {
   padding: 0 0 10rem 0;
   margin: 0rem 10%;
-  color: #e7c91a;
-  line-height: 1.65rem;
-  font-size: 1.25rem; }
+  color: #fff;
+  line-height: 2.5rem;
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 2rem; }
 
 .skills {
   padding: 0 12px;
@@ -308,7 +319,7 @@ p.intro {
 .skills__wrapper {
   background-color: #fff;
   border: 1px solid #dee2e6;
-  border-radius: 4px;
+  border-radius: 15px;
   box-shadow: 2px 3px 3px 2px rgba(0, 0, 0, 0.04);
   margin-top: -140px; }
 
@@ -317,12 +328,12 @@ p.intro {
 
 .skill__icon {
   font-size: 3rem;
-  color: #f85a3e; }
+  color: #ff8900; }
 
 .skill__title {
   font-size: 24px;
   font-weight: 500;
-  color: #0068ad;
+  color: #293347;
   line-height: 24px; }
 
 .skill__text {
@@ -331,11 +342,11 @@ p.intro {
   line-height: 24px; }
 
 .skill__heading {
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 300;
   margin: 0;
   padding: 24px 0 8px;
-  color: #e7c91a; }
+  color: #ff8900; }
 
 .skill__list {
   font-size: 16px;
@@ -348,7 +359,7 @@ p.intro {
   border-top: 1px solid #dee2e6;
   border-bottom: 1px solid #dee2e6; }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 900px) {
   .hero__title {
     font-size: 56px;
     margin: 60px auto 0;
@@ -372,7 +383,7 @@ p.intro {
     border-left: 1px solid #dee2e6;
     border-right: 1px solid #dee2e6; } }
 .work {
-  margin-bottom: 10rem; }
+  margin-bottom: 4rem; }
 
 .work_example {
   background: #0068ad;
@@ -423,7 +434,7 @@ p.intro {
   margin-top: 50px; }
 
 footer {
-  background-color: #f85a3e; }
+  background-color: #ff8900; }
   footer .footer_social {
     height: auto;
     width: 100%;
@@ -446,12 +457,12 @@ footer {
         text-decoration-color: none; }
   footer .copyright {
     padding: 0.5rem 0;
-    color: #e7c91a;
+    color: #fff;
     font-size: 1.15rem; }
 
 .footer_icon_wrapper {
   justify-content: center;
-  border: 2px solid #e7c91a;
+  border: 1px solid #e6e2e2;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
@@ -460,7 +471,7 @@ footer {
   justify-content: center;
   margin-right: 0; }
   .footer_icon_wrapper i {
-    color: #e7c91a;
+    color: #eee7e7;
     font-size: 1.5rem;
     align-self: center; }
   .footer_icon_wrapper i::before {
@@ -469,9 +480,9 @@ footer {
     height: auto; }
 
 .footer_icon_wrapper:hover {
-  background: #e7c91a; }
+  background: #fff; }
   .footer_icon_wrapper:hover i {
-    color: #f85a3e; }
+    color: #ff8900; }
 
 @media screen and (min-width: 700px) and (max-width: 1200px) {
   footer ul {
@@ -490,7 +501,7 @@ footer {
   grid-template-columns: 33.3% 33.3% 33.3%;
   margin: 1rem 0 3rem 0;
   padding: 3rem 2rem;
-  background-color: #0068ad;
+  background-color: #293347;
   margin: 0 1rem;
   border-radius: 10px;
   margin-top: -5rem;
@@ -499,29 +510,39 @@ footer {
 
 .footer_resume_column {
   margin: 0;
-  padding: 0.5rem;
+  padding: 0.75rem;
   display: flex;
   align-items: center; }
   .footer_resume_column h2 {
-    margin: 0 auto; }
+    margin: 0 auto;
+    font-size: 2rem;
+    line-height: 2rem; }
   .footer_resume_column p {
-    margin: 0 auto; }
-  .footer_resume_column input {
+    margin: 0 auto;
+    font-weight: 200;
+    line-height: 1.5rem;
+    font-size: 1.15rem; }
+  .footer_resume_column button {
     margin: 0 auto;
     background: transparent;
     border: none;
-    border-bottom: 2px solid white;
+    border: 2px solid #ff8900;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
     outline: transparent;
-    width: 85%;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    cursor: pointer; }
+  .footer_resume_column button:hover {
+    background: #ff8900;
     color: #fff; }
-    .footer_resume_column input :hover {
-      border: none;
-      border-bottom: 2px solid white; }
 
 @media screen and (min-width: 700px) and (max-width: 1200px) {
   footer ul {
     grid-template-columns: 8% 8% 8% 8% 8%; } }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   footer ul {
     grid-template-columns: 15% 15% 15% 15% 15%; }
 
