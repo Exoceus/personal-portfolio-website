@@ -21,26 +21,6 @@ body {
 .text_center {
   text-align: center; }
 
-.heading_line_sm::after {
-  content: "";
-  display: block;
-  background: black;
-  width: 4rem;
-  height: 3px;
-  margin: 0.75rem auto 0 auto;
-  box-shadow: 2px 3px 3px 2px rgba(0, 0, 0, 0.048);
-  border-radius: 3px; }
-
-.heading_line_md::after {
-  content: "";
-  display: block;
-  background: black;
-  width: 6rem;
-  height: 4px;
-  margin: 0.75rem auto 0 auto;
-  box-shadow: 2px 3px 3px 2px rgba(0, 0, 0, 0.048);
-  border-radius: 4px; }
-
 .heading_line_lg::after {
   content: "";
   display: block;
@@ -54,25 +34,23 @@ body {
 .pad_tb_reg {
   padding: 1rem 0; }
 
-section.welcome-page {
-  /*
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbJVPRI_-XMoDSM5r3hQtt9eX8S3C_xVls9wxhtDSVUnJ3HmrI);
-  */
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
+.welcome-page {
   display: flex;
   align-items: center;
-  text-align: center; }
+  justify-content: center; }
 
 .landing_page_hero_heading {
-  width: 100vw;
-  position: absolute;
   color: #293347;
   font-family: 'Roboto', sans-serif;
-  font-size: 4rem;
-  height: auto; }
+  font-size: 3rem;
+  letter-spacing: 1px;
+  padding: 0 5%; }
+
+.landing_page_hero_heading span {
+  color: #ff8900; }
+
+.landing_page_hero_subheading {
+  font-weight: 200; }
 
 /*
 background-color: #0068ad;
