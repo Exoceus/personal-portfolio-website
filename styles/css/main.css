@@ -51,11 +51,14 @@ body {
   color: #ff8900; }
 
 .landing_page_hero_subheading {
-  font-weight: 200; }
+  font-weight: 200;
+  padding: 0 1.5rem;
+  text-align: center;
+  line-height: 2rem; }
 
 .avatar_icon {
   width: 75%;
-  margin: 0 0 0 23%; }
+  margin: 0 0 0 25.25%; }
 
 /*
 background-color: #0068ad;
@@ -191,7 +194,7 @@ nav button:hover {
   transition: opacity 250ms ease-in-out 250ms; }
 
 nav a {
-  color: #ff8900;
+  color: #fff;
   text-decoration: none;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -247,10 +250,9 @@ nav a:hover {
     outline: none;
     border-radius: 1rem;
     color: #ff8900;
+    font-size: 1.2rem;
     opacity: 1;
-    font-size: 1.25rem;
-    text-transform: none;
-    width: 130px;
+    width: 150px;
     padding: 0.2rem 0.25rem; }
 
   nav button:hover {
@@ -259,7 +261,8 @@ nav a:hover {
 
   nav a {
     opacity: 1;
-    position: relative; }
+    position: relative;
+    color: #ff8900; }
 
   nav a::before {
     content: '';
@@ -307,7 +310,7 @@ p.intro {
   padding: 0 0 10rem 0;
   margin: 0rem 10%;
   color: #fff;
-  line-height: 2.5rem;
+  line-height: 2rem;
   font-size: 1.25rem;
   font-weight: 300;
   margin-bottom: 2rem; }
@@ -433,6 +436,60 @@ p.intro {
 .work {
   margin-top: 50px; }
 
+.achievements {
+  margin: 0 0 6rem 0; }
+
+.achievement_intro {
+  background-color: #ff8900;
+  padding: 1rem 0 6rem 0;
+  color: #fff; }
+
+.achievement_body_wrapper {
+  margin-top: -120px;
+  padding: 0.5rem;
+  max-width: 1200px;
+  margin: -120px auto 100px auto; }
+
+.achievement_heading {
+  font-size: 2.5rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400; }
+
+.achievement_subheading {
+  font-size: 1.5rem;
+  font-weight: 300; }
+
+.achievement_example {
+  background: #fff;
+  border-radius: 15px;
+  border: 1px solid #dee2e6;
+  color: #293347;
+  margin: 1.5rem 0.5rem;
+  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.055);
+  padding: 1.5rem 2rem; }
+  .achievement_example .achievement_example_title {
+    padding: 1rem 0;
+    margin: 0; }
+  .achievement_example .achievement_icon i {
+    font-size: 2.5rem; }
+  .achievement_example .achievement_example_text {
+    font-weight: 300; }
+
+.fa-hackerrank {
+  color: #1ba94c; }
+
+.fa-trophy {
+  color: #f1e20d; }
+
+.fa-table-tennis {
+  color: #d84646; }
+
+@media screen and (min-width: 700px) {
+  .achievement_body_wrapper {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33.3% 33.3% 33.3%;
+    justify-content: center; } }
 footer {
   background-color: #ff8900; }
   footer .footer_social {
