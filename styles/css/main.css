@@ -40,12 +40,19 @@ body {
   align-items: center;
   justify-content: center; }
 
+.hero_heading_section {
+  left: 50;
+  top: 20%;
+  position: absolute;
+  cursor: default; }
+
 .landing_page_hero_heading {
   color: #293347;
   font-family: 'Roboto', sans-serif;
   font-size: 3rem;
   letter-spacing: 1px;
-  padding: 0 5%; }
+  padding: 0 5%;
+  z-index: 10; }
 
 .landing_page_hero_heading span {
   color: #ff8900; }
@@ -58,7 +65,7 @@ body {
 
 .avatar_icon {
   width: 75%;
-  margin: 0 0 0 25.25%; }
+  margin: 0 0 0 12.6%; }
 
 /*
 background-color: #0068ad;
@@ -92,6 +99,12 @@ i.fa-angle-down {
 
 .project_page_title {
   color: black; }
+
+#particles-js {
+  height: 100vh;
+  background-color: transparent;
+  position: relative;
+  z-index: 0; }
 
 header {
   background: transparent;
@@ -174,6 +187,9 @@ nav li {
   text-align: center;
   border-bottom: 2px solid #fff; }
 
+nav li:last-child {
+  border: none; }
+
 nav button {
   background: transparent;
   color: white;
@@ -186,8 +202,8 @@ nav button {
   border: none;
   cursor: pointer; }
 
-nav button:hover {
-  color: #e7c91a; }
+nav button:focus {
+  color: #ffc402; }
 
 .nav-toggle:checked ~ nav button {
   opacity: 1;
@@ -249,15 +265,19 @@ nav a:hover {
     border: 2px solid #ff8900;
     outline: none;
     border-radius: 1rem;
+    position: relative;
     color: #ff8900;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     opacity: 1;
     width: 150px;
-    padding: 0.2rem 0.25rem; }
+    padding: 0.2rem 0.3rem;
+    z-index: 1;
+    overflow: hidden; }
 
   nav button:hover {
     background: #ff8900;
-    color: #fff; }
+    color: #fff;
+    transition: .3s ease-in-out; }
 
   nav a {
     opacity: 1;
@@ -285,7 +305,7 @@ nav a:hover {
 
 .intro_title {
   margin: 0;
-  padding: 1rem 0;
+  padding: 1rem 0.5rem;
   color: #fff;
   font-size: 2rem;
   font-weight: 400;
@@ -386,7 +406,7 @@ p.intro {
     border-left: 1px solid #dee2e6;
     border-right: 1px solid #dee2e6; } }
 .work {
-  margin-bottom: 4rem; }
+  margin: 0 auto 4rem auto; }
 
 .work_example {
   background: #0068ad;
@@ -446,18 +466,19 @@ p.intro {
 
 .achievement_body_wrapper {
   margin-top: -120px;
-  padding: 0.5rem;
   max-width: 1200px;
   margin: -120px auto 100px auto; }
 
 .achievement_heading {
   font-size: 2.5rem;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+  line-height: 2.5rem; }
 
 .achievement_subheading {
   font-size: 1.5rem;
-  font-weight: 300; }
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif; }
 
 .achievement_example {
   background: #fff;
@@ -468,8 +489,10 @@ p.intro {
   box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.055);
   padding: 1.5rem 2rem; }
   .achievement_example .achievement_example_title {
+    color: #293347;
     padding: 1rem 0;
-    margin: 0; }
+    margin: 0;
+    line-height: 1.5rem; }
   .achievement_example .achievement_icon i {
     font-size: 2.5rem; }
   .achievement_example .achievement_example_text {
@@ -490,6 +513,20 @@ p.intro {
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 33.3% 33.3% 33.3%;
     justify-content: center; } }
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 100px solid black; }
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-top: 100px solid black; }
+
 footer {
   background-color: #ff8900; }
   footer .footer_social {
@@ -537,9 +574,11 @@ footer {
     height: auto; }
 
 .footer_icon_wrapper:hover {
+  transition: .3s ease-in-out;
   background: #fff; }
   .footer_icon_wrapper:hover i {
-    color: #ff8900; }
+    color: #ff8900;
+    transition: .3s ease-in-out; }
 
 @media screen and (min-width: 700px) and (max-width: 1200px) {
   footer ul {
@@ -594,7 +633,8 @@ footer {
     cursor: pointer; }
   .footer_resume_column button:hover {
     background: #ff8900;
-    color: #fff; }
+    color: #fff;
+    transition: .3s ease-in-out; }
 
 @media screen and (min-width: 700px) and (max-width: 1200px) {
   footer ul {
