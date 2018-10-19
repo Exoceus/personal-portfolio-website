@@ -16,6 +16,19 @@ body {
 .pad_lf_reg {
   padding: 0 1rem; }
 
+/* width */
+::-webkit-scrollbar {
+  width: 7px; }
+
+/* Track */
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff8900; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ff4800; }
+
 .full_page {
   height: 100vh; }
 
@@ -42,7 +55,7 @@ body {
 
 .hero_heading_section {
   left: 50;
-  top: 20%;
+  top: 18%;
   position: absolute;
   cursor: default; }
 
@@ -65,7 +78,8 @@ body {
 
 .avatar_icon {
   width: 75%;
-  margin: 0 0 0 12.6%; }
+  margin: 0 0 0 12.6%;
+  height: 25%; }
 
 /*
 background-color: #0068ad;
@@ -106,10 +120,52 @@ i.fa-angle-down {
   position: relative;
   z-index: 0; }
 
+@media screen and (max-height: 800px) {
+  .avatar_icon {
+    width: 50%;
+    margin-left: 25%; } }
+.learn_more_wrapper {
+  display: grid;
+  justify-content: center; }
+
+.learn_more_button {
+  border: 2px solid #ff8900;
+  border-radius: 2rem;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0.5rem 0; }
+
+.learn_more_button a {
+  padding: 1rem;
+  font-family: arial;
+  font-size: 1.25rem;
+  color: #ff8900;
+  text-decoration: none;
+  z-index: 2;
+  position: relative; }
+
+.slice_up {
+  width: 100rem;
+  height: 50px;
+  bottom: -50px;
+  background: #ff8900;
+  position: absolute;
+  transition: all .5s ease;
+  z-index: 1; }
+
+.learn_more_button:hover .slice_up {
+  bottom: 0; }
+
+.learn_more_button:hover a {
+  color: #fff; }
+
 header {
   background: transparent;
   text-align: center;
-  position: fixed;
+  position: absolute;
   z-index: 999;
   width: 100%;
   top: 0;
@@ -299,7 +355,7 @@ nav a:hover {
 
   nav a:hover::before {
     transform: scale(1, 1); } }
-.intro {
+#intro {
   background-color: #ff8900;
   padding: 3rem 0 0 0; }
 
@@ -336,7 +392,7 @@ p.intro {
   margin-bottom: 2rem; }
 
 .skills {
-  padding: 0 12px;
+  padding: 0 12px 10rem 12px;
   text-align: center; }
 
 .skills__wrapper {
@@ -405,72 +461,113 @@ p.intro {
     border-top: none;
     border-left: 1px solid #dee2e6;
     border-right: 1px solid #dee2e6; } }
+.work_wrapper {
+  padding: 6rem 0 0 0;
+  margin: 0 0 5rem 0;
+  border-top: 1px solid #e2dcdc; }
+
+.work_heading {
+  font-size: 2rem;
+  line-height: 2rem;
+  padding: 0;
+  color: #293347;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif; }
+
 .work {
-  margin: 0 auto 4rem auto; }
+  margin: 0 auto 5rem auto; }
+
+.work_body_wrapper {
+  max-width: 1200px;
+  margin: 0 auto 0 auto; }
 
 .work_example {
-  background: #0068ad;
-  border-radius: 10px;
+  background: #fff;
+  color: #293347;
+  margin: 1.5rem 1rem;
+  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.055);
+  border-radius: 15px;
+  border: 1px solid #dee2e6; }
+
+.work_example_title {
   color: #fff;
-  margin: 0 1rem;
-  box-shadow: 2px 3px 3px 2px rgba(0, 0, 0, 0.1); }
-  .work_example .work_example_title {
-    padding: 1rem 0;
-    border-bottom: 1px solid #0068ad;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    background: #e7c91a;
-    color: #0068ad; }
-  .work_example .work_example_text {
-    padding: 0.75rem 0.5rem; }
+  background-color: #ff8900;
+  margin: 0;
+  line-height: 1.75rem;
+  padding: 0.75rem 1rem;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px; }
 
-@media screen and (min-width: 1024px) {
-  .work_wrapper {
-    margin: 0 5%; }
+.work_example_text {
+  font-weight: 300;
+  padding: 0.5rem 1rem; }
 
-  .work {
+@media screen and (min-width: 700px) {
+  .work_body_wrapper {
     display: grid;
     grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 50% 50%;
-    justify-content: center; }
-
-  .work_example {
-    margin: 1rem; }
-
-  .work_example_title {
-    padding: 0;
-    margin: 0; } }
-@media screen and (min-width: 700px) and (max-width: 1024px) {
-  .work {
-    display: grid;
-    grid-template-columns: 50% 50%;
     grid-template-rows: 33.3% 33.3% 33.3%;
-    justify-content: center; }
+    justify-content: center; } }
+.video_showcase {
+  padding: 6rem 0 10rem 0;
+  border-top: 1px solid #e2dcdc; }
 
-  .work_example {
-    margin: 1rem; }
+h1.video_heading {
+  font-size: 2rem;
+  line-height: 2rem;
+  color: #293347;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif; }
 
-  .work_example_title {
-    padding: 0;
-    margin: 0; } }
-.work {
-  margin-top: 50px; }
+.video_wrapper {
+  padding: 2rem 10%; }
+
+.one_video {
+  position: relative;
+  padding-bottom: 56.25%; }
+
+.one_video iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+.more_videos {
+  display: grid;
+  justify-content: center; }
+
+.more_videos button {
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 2px solid #ff8900;
+  background: transparent;
+  color: #ff8900;
+  font-size: 1.25rem;
+  font-weight: 300;
+  border-radius: 2rem;
+  cursor: pointer; }
+
+.more_videos button:hover {
+  background: #ff8900;
+  transition: .4s ease-in-out;
+  color: #fff; }
 
 .achievements {
   margin: 0 0 6rem 0; }
 
 .achievement_intro {
   background-color: #ff8900;
-  padding: 1rem 0 6rem 0;
+  padding: 1rem 0 8rem 0;
   color: #fff; }
 
 .achievement_body_wrapper {
-  margin-top: -120px;
+  margin-top: -100px;
   max-width: 1200px;
   margin: -120px auto 100px auto; }
 
 .achievement_heading {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   line-height: 2.5rem; }
@@ -485,7 +582,7 @@ p.intro {
   border-radius: 15px;
   border: 1px solid #dee2e6;
   color: #293347;
-  margin: 1.5rem 0.5rem;
+  margin: 1.5rem 1rem;
   box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.055);
   padding: 1.5rem 2rem; }
   .achievement_example .achievement_example_title {
@@ -513,20 +610,6 @@ p.intro {
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 33.3% 33.3% 33.3%;
     justify-content: center; } }
-.arrow-up {
-  width: 0;
-  height: 0;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-bottom: 100px solid black; }
-
-.arrow-down {
-  width: 0;
-  height: 0;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-top: 100px solid black; }
-
 footer {
   background-color: #ff8900; }
   footer .footer_social {
@@ -550,7 +633,7 @@ footer {
         text-decoration: none;
         text-decoration-color: none; }
   footer .copyright {
-    padding: 0.5rem 0;
+    padding: 2rem 0;
     color: #fff;
     font-size: 1.15rem; }
 
@@ -653,37 +736,45 @@ footer {
     grid-template-rows: 33.3% 33.3% 33.3%;
     grid-template-columns: 100%; } }
 .aboutpage_hero {
-  height: 90vh;
+  height: 100vh;
   width: 100%;
   overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-image: linear-gradient(to bottom, #0068ad, #0262a8); }
+  justify-content: center; }
 
 .aboutpage_heading {
-  line-height: 2.5rem;
-  color: #fff;
-  text-align: center;
-  padding: 0 1.5rem;
-  font-size: 2.25rem;
-  letter-spacing: 2px;
-  font-weight: 500; }
+  color: #293347;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  line-height: 3rem;
+  letter-spacing: 1px;
+  padding: 0 5%;
+  z-index: 10; }
 
 .aboutpage_section_title {
-  transform: skew(-4deg);
-  margin: 1.5rem 0 2rem 0;
-  font-size: 1.8rem; }
+  font-size: 2rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  line-height: 2.5rem;
+  color: #293347; }
 
-.aboutpage_section_title::after {
-  content: "";
-  display: block;
-  background: black;
-  width: 7.5rem;
-  height: 3px;
-  margin: 0.75rem auto 0 auto;
-  box-shadow: 2px 3px 3px 2px rgba(0, 0, 0, 0.1);
-  border-radius: 3px; }
+/*-----------------------------Toggle_option----------------------*/
+.about_toggle {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  font-size: 1.25rem; }
+
+.toggle_option {
+  width: auto;
+  margin: 0 1rem;
+  cursor: pointer; }
+
+.toggle_option_1 {
+  text-align: right; }
 
 /*----------------------------TIMELINE starts here-----------------------*/
 * {
@@ -700,7 +791,7 @@ footer {
   content: '';
   position: absolute;
   width: 6px;
-  background-color: black;
+  background-color: #293347;
   top: 15px;
   bottom: 5px;
   left: 50%;
@@ -721,8 +812,8 @@ footer {
   width: 25px;
   height: 25px;
   right: -17px;
-  background-color: white;
-  border: 4px solid #FF9F55;
+  background-color: #ff8900;
+  border: 6px solid #fff;
   top: 15px;
   border-radius: 50%;
   z-index: 1; }
@@ -745,9 +836,9 @@ footer {
   width: 0;
   z-index: 1;
   right: 30px;
-  border: medium solid #f85a3e;
+  border: medium solid #ff8900;
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent #f85a3e; }
+  border-color: transparent transparent transparent #ff8900; }
 
 /* Add arrows to the right container (pointing left) */
 .right::before {
@@ -758,9 +849,9 @@ footer {
   width: 0;
   z-index: 1;
   left: 30px;
-  border: medium solid #f85a3e;
+  border: medium solid #ff8900;
   border-width: 10px 10px 10px 0;
-  border-color: transparent #f85a3e transparent transparent; }
+  border-color: transparent #ff8900 transparent transparent; }
 
 /* Fix the circle for containers on the right side */
 .right::after {
@@ -769,14 +860,16 @@ footer {
 /* The actual content */
 .timeline_point {
   padding: 20px 30px;
-  background-color: #f85a3e;
+  background-color: #fff;
   position: relative;
   border-radius: 6px;
-  color: #fff;
-  box-shadow: 2px 3px 3px 2px rgba(0, 0, 0, 0.1); }
+  color: #ff8900;
+  font-weight: 300;
+  box-shadow: 2px 3px 3px 2px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ece8e8; }
 
 .timeline_point_heading {
-  color: #e7c91a; }
+  color: #ff8900; }
 
 .timeline_point:hover {
   box-shadow: 3px 4px 4px 3px rgba(0, 0, 0, 0.137); }
@@ -797,9 +890,9 @@ footer {
   /* Make sure that all arrows are pointing leftwards */
   .timeline_point_wrapper::before {
     left: 60px;
-    border: medium solid #f85a3e;
+    border: medium solid #ff8900;
     border-width: 10px 10px 10px 0;
-    border-color: transparent #f85a3e transparent transparent; }
+    border-color: transparent #ff8900 transparent transparent; }
 
   /* Make sure all circles are at the same spot */
   .left::after,
@@ -809,6 +902,21 @@ footer {
   /* Make all right containers behave like the left ones */
   .right {
     left: 0%; } }
+.programming_journey_item {
+  height: 250px;
+  width: 250px;
+  z-index: 2;
+  background: #fff; }
+
+.programming_journey_item::before {
+  z-index: 1;
+  content: '';
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: red;
+  margin-bottom: -50px; }
+
 .project_page_hero {
   background: linear-gradient(to bottom, #0068ad, #24dbd2);
   display: flex;
