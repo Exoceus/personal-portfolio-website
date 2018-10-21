@@ -21,6 +21,7 @@ body {
   width: 7px; }
 
 /* Track */
+/*::-webkit-scrollbar-track {}*/
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #ff8900; }
@@ -506,10 +507,9 @@ p.intro {
   .work_body_wrapper {
     display: grid;
     grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 33.3% 33.3% 33.3%;
     justify-content: center; } }
 .video_showcase {
-  padding: 6rem 0 10rem 0;
+  padding: 6rem 5% 10rem 5%;
   border-top: 1px solid #e2dcdc; }
 
 h1.video_heading {
@@ -520,11 +520,14 @@ h1.video_heading {
   font-family: 'Open Sans', sans-serif; }
 
 .video_wrapper {
-  padding: 2rem 10%; }
+  max-width: 1200px;
+  margin: auto;
+  padding-bottom: 6rem; }
 
 .one_video {
   position: relative;
-  padding-bottom: 56.25%; }
+  padding-bottom: 56.25%;
+  box-shadow: 2px 3px 3px 2px rgba(0, 0, 0, 0.082); }
 
 .one_video iframe {
   position: absolute;
@@ -608,7 +611,6 @@ h1.video_heading {
   .achievement_body_wrapper {
     display: grid;
     grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 33.3% 33.3% 33.3%;
     justify-content: center; } }
 footer {
   background-color: #ff8900; }
@@ -752,6 +754,9 @@ footer {
   padding: 0 5%;
   z-index: 10; }
 
+.aboutpage_heading span {
+  color: #ff8900; }
+
 .aboutpage_section_title {
   font-size: 2rem;
   font-family: 'Open Sans', sans-serif;
@@ -766,7 +771,7 @@ footer {
   margin-bottom: 1rem;
   display: grid;
   grid-template-columns: 50% 50%;
-  font-size: 1.25rem; }
+  font-size: 1.5rem; }
 
 .toggle_option {
   width: auto;
@@ -811,7 +816,7 @@ footer {
   position: absolute;
   width: 25px;
   height: 25px;
-  right: -17px;
+  right: -19px;
   background-color: #ff8900;
   border: 6px solid #fff;
   top: 15px;
@@ -825,7 +830,8 @@ footer {
 
 /* Place the container to the right */
 .right {
-  left: 50%; }
+  left: 50%;
+  margin-left: -2px; }
 
 /* Add arrows to the left container (pointing right) */
 .left::before {
@@ -865,8 +871,7 @@ footer {
   border-radius: 6px;
   color: #ff8900;
   font-weight: 300;
-  box-shadow: 2px 3px 3px 2px rgba(0, 0, 0, 0.1);
-  border: 1px solid #ece8e8; }
+  border: 1px solid #f7f2f2; }
 
 .timeline_point_heading {
   color: #ff8900; }
@@ -902,34 +907,83 @@ footer {
   /* Make all right containers behave like the left ones */
   .right {
     left: 0%; } }
-.programming_journey_item {
-  height: 250px;
-  width: 250px;
-  z-index: 2;
-  background: #fff; }
+/*------------Programming_journey------------------*/
+.programming_journey_intro_heading {
+  font-size: 2rem;
+  line-height: 2rem;
+  color: #293347;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 5rem; }
 
-.programming_journey_item::before {
-  z-index: 1;
+.programming_journey_body {
+  margin-bottom: 10rem; }
+
+/*-------Items in the programming journey-----------*/
+.programming_journey_item {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  padding: 0 25%;
+  margin: 0 auto 5rem auto; }
+
+.programming_journey_item_image {
+  display: grid;
+  justify-content: right; }
+
+.programming_journey_image_wrapper {
+  height: 200px;
+  width: 200px;
+  background: #ff8900;
+  position: relative;
+  padding: 15px 0 0 15px;
+  border-radius: 10px;
+  margin-right: 50%; }
+
+.programming_journey_image_wrapper .img {
+  background: #fff;
+  z-index: 5;
+  height: 200px;
+  width: 350px;
+  border-radius: 5px;
+  box-shadow: 2px 3px 3px 2px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ece8e8;
+  border-left: none;
+  border-top: none; }
+
+.programming_journey_item_heading {
+  margin: 15px 0 0 0.5rem;
+  color: #ff8900;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.4rem; }
+
+.programming_journey_item_heading::before {
   content: '';
   display: block;
-  width: 100px;
-  height: 100px;
-  background: red;
-  margin-bottom: -50px; }
+  width: 3px;
+  height: 5.5rem;
+  background-color: #ff8900;
+  margin: 0 5px -4.8rem -0.5rem; }
+
+.programming_journey_date {
+  padding: 0 0 0 0;
+  margin: 10px 0 8px 0.5rem;
+  font-weight: 300; }
 
 .project_page_hero {
-  background: linear-gradient(to bottom, #0068ad, #24dbd2);
   display: flex;
   align-items: center;
   justify-content: center; }
 
 .project_page_title {
-  color: #fff;
-  font-family: 'Quicsksand', sans-serif;
-  font-size: 2.5rem;
-  line-height: 3rem;
+  color: #293347;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
   letter-spacing: 1px;
-  padding: 0 5%; }
+  padding: 0 5%;
+  z-index: 10;
+  line-height: 3rem; }
 
 .project_page_title::after {
   content: "";
